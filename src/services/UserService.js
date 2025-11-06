@@ -1,9 +1,10 @@
 import { data } from "react-router";
-import { httpClient } from "../config/AxiosHelper";
+import { baseURL, httpClient } from "../config/AxiosHelper";
 
 
 export const saveUser = async (formData) => {
     console.log("2")
+    consloe.log(baseURL)
     const response = await httpClient.post(`/api/saveUser`,formData);
     console.log("6")
     console.log(response.data)
